@@ -1,0 +1,6 @@
+CREATE TABLE lanche (
+id BIGINT(20) PRIMARY KEY AUTO_INCREMENT,
+lanche VARCHAR(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO lanche (lanche) values ("Pão");
