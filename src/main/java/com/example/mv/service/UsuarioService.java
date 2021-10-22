@@ -15,7 +15,7 @@ public class UsuarioService {
 	private UsuarioRepository usuarioRepository;
 
 	public Usuario atualizar(Long id, Usuario usuario) {
-		Usuario usuarioSalvo = usuarioRepository.findById(id).orElseThrow();
+		Usuario usuarioSalvo = usuarioRepository.findById(id).orElseThrow(null);
 		if (usuarioSalvo == null) {
 			throw new EmptyResultDataAccessException(1);
 		}
