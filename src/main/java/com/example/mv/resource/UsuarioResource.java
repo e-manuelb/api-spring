@@ -19,6 +19,7 @@ import com.example.mv.model.Usuario;
 import com.example.mv.repository.UsuarioRepository;
 import com.example.mv.service.UsuarioService;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/usuarios")
 public class UsuarioResource {
@@ -51,6 +52,7 @@ public class UsuarioResource {
 		return usuarioRepository.findById(id);
 	}
 
+	@CrossOrigin
 	@PutMapping("/{id}")
 	public ResponseEntity<Usuario> atualizar(@PathVariable Long id, @Valid @RequestBody Usuario usuario) {
 		Usuario usuarioSalvo = usuarioService.atualizar(id, usuario);

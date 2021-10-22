@@ -18,6 +18,7 @@ import com.example.mv.event.RecursoCriadoEvento;
 import com.example.mv.model.Requisicao;
 import com.example.mv.repository.RequisicaoRepository;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/requisicoes")
 public class RequisicaoResource {

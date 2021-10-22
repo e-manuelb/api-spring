@@ -2,6 +2,7 @@ package com.example.mv.model;
 
 import java.util.Objects;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,30 +21,12 @@ public class Requisicao {
 
 	@NotNull
 	@Size(min = 3, max = 50)
-	public String nomePessoa;
-
-	@NotNull
-	public String cpfPessoa;
+	public String funcionario;
 
 	@NotNull
 	@Size(min = 3, max = 50)
+	@Column(unique=true)
 	public String lanche;
-
-	public String getNomePessoa() {
-		return nomePessoa;
-	}
-
-	public void setNomePessoa(String nomePessoa) {
-		this.nomePessoa = nomePessoa;
-	}
-
-	public String getCpfPessoa() {
-		return cpfPessoa;
-	}
-
-	public void setCpfPessoa(String cpfPessoa) {
-		this.cpfPessoa = cpfPessoa;
-	}
 
 	public String getLanche() {
 		return lanche;
